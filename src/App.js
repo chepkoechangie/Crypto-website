@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Coin from './Coin';
-// import Navbar from './Navbar';
-// import Home from './Components/Home'; 
-import Button from 'react-bootstrap/Button';
+//import Navbar from './Navbar';
+//import Home from './Components/Home'; 
+
 
 function App() {
   const [coins,setCoins] = useState([])
@@ -20,3 +20,38 @@ function App() {
   const filteredCoins = coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()
     )
     )
+
+    return (
+      <div className="coin-app">
+        <div className="coin-search">
+          <h1 className="coin-text">CryptIt</h1>
+          <form action="">
+            <input type="text" className="coin-input" placeholder="Enter your preffered asset name" onChange={handleChange}/>
+  
+          </form>
+  
+        </div>
+      
+  
+        {filteredCoins.map(coin=>{
+          return(
+            <Coin 
+            key={coin.id} 
+            name={coin.name} 
+            image={coin.image} 
+            symbol={coin.symbol}
+            marketcap={coin.market_cap}
+            price={coin.current_price}
+            pricechange={coin.price_change_percentage_24h}
+            />
+          )
+        })}
+  
+  
+      </div>
+    );
+  }
+  
+  
+  
+  export default App;
