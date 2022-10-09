@@ -59,7 +59,11 @@ body {
   font-weight: 700;
   font-size:30px;
 }
+.cryptoPrice{
+  font-size:large;
+  padding-left: 130px;
 
+}
 
 
 
