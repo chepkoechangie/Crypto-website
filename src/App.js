@@ -1,30 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import CryptoCollection from './Components/CryptoCollection';
-//import Navbar from './Navbar';
-//import Home from './Components/Home'; 
+import React from 'react';
+import Navbar from './Navbar';
+import Home from './Home';
+import Contact from './Components/Contact';
+import Reviews from './Components/Reviews';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 
 
 function App() {
-  const [coins,setCoins] = useState([]);
-  // const [search,setSearch] = useState('');
-
-  useEffect(() => {
-    fetch('https://guarded-caverns-85444.herokuapp.com/crypto')
-    .then(res=> res.json())
-    .then(data =>setCoins(data))
-    .catch(error=>console.log(error))
-  }, [])
-  // const handleChange = e =>{
-  //   setSearch(e.target.value)
-  //}
-  // const filteredCoins = coins.filter(coin=> coin.name.toLowerCase().includes(search.toLowerCase()
-  //   )
-  //   )
-  //   console.log(filteredCoins);
-
-    return (
+ return (
       <>
-      <CryptoCollection Cryptos={coins} />
+      <Router>
+        <Navbar/>
+       <Switch>
+        <Route path='/home'>
+          <Home/>
+        </Route>
+        <Route path='/contact'>
+          <Contact/>
+        </Route>
+        <Route path='/reviews'>
+         <Reviews/>
+        </Route>
+       </Switch>
+      </Router>
       </>
     );
   }

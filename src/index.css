@@ -9,6 +9,90 @@ body {
   
   
 }
+.collection{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px; 
+  padding-bottom: 20px;
+  column-gap:20px ;
+  row-gap: 20px;
+  font-weight: 300;
+ 
+}
+.cryptoImg{
+  height: 150px;
+  padding-left: 100px;
+  margin-top: 15px;
+}
+.cryptoCard{
+  height: auto;
+  border: solid;
+  background-color: aqua;
+}
+.cryptoName{
+  padding-left: 130px;
+  font-size: large;
+}
+.nav {
+  background-color:grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.nav ul {
+  padding: 0;
+  padding-right: 800pt;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 15rem;
+}
+.nav a {
+  color: inherit;
+  text-decoration: underline;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  font-weight: 700;
+  font-size:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
