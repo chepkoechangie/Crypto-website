@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import CryptoCollection from "./CryptoCollection";
+import Search from "./Components/Search";
 
 function Home() {
     const [coins,setCoins] = useState([]);
@@ -11,6 +12,7 @@ function Home() {
       .catch(error=>console.log(error))
     }, [])
   return <h1>
+    <Search/>
     <CryptoCollection Cryptos={coins} />
   </h1>;
 }
