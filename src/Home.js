@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import CryptoCollection from "./CryptoCollection";
+import CryptoCollection from "./Components/CryptoCollection";
 import Search from "./Components/Search";
 
 function Home() {
