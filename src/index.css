@@ -29,6 +29,10 @@ body {
   border: solid;
   background-color: aqua;
 }
+.cryptoCard:hover{
+  transform: scale(1.01);
+  transition: ease-in-out 0.5;
+}
 .cryptoName{
   padding-left: 130px;
   font-size: large;
@@ -77,9 +81,23 @@ body {
   display: inline-flex;
   
 }
-
-
-
+.contact{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5px;
+  background-color: aqua;
+}
+.contactUs{
+  text-align: center;
+  background-color: grey;
+}
+.listContainer{
+  display:flex;
+  justify-content: space-around;
+  list-style: none;
+  gap:1rem;
+}
 
 
 
